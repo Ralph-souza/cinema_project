@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # apps
-    'movie_theater',
+    'admin_app',
     'sales_app',
 ]
 
