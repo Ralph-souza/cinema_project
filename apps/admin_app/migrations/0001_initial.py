@@ -21,6 +21,11 @@ class Migration(migrations.Migration):
                 ('category', models.CharField(choices=[('horror', 'Horror'), ('comedy', 'Comedy'), ('drama', 'Drama'), ('thriller', 'Thriller')], max_length=50)),
                 ('rating', models.IntegerField()),
             ],
+            options={
+                'verbose_name': 'Movie',
+                'verbose_name_plural': 'Movies',
+                'ordering': ['id'],
+            },
         ),
         migrations.CreateModel(
             name='Rooms',
@@ -30,6 +35,11 @@ class Migration(migrations.Migration):
                 ('seats', models.IntegerField()),
                 ('three_d', models.BooleanField()),
             ],
+            options={
+                'verbose_name': 'Room',
+                'verbose_name_plural': 'Rooms',
+                'ordering': ['id'],
+            },
         ),
         migrations.CreateModel(
             name='Teather',
@@ -40,5 +50,10 @@ class Migration(migrations.Migration):
                 ('rooms', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='admin_app.rooms')),
                 ('titles', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='admin_app.movies')),
             ],
+            options={
+                'verbose_name': 'Teather',
+                'verbose_name_plural': 'Teathers',
+                'ordering': ['id'],
+            },
         ),
     ]
